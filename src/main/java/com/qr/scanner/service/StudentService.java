@@ -13,4 +13,6 @@ public interface StudentService {
     public StudentsEntity saveStudent(StudentsEntity studenstsEntity);
 
     public StudentsEntity findById(Long Id);
+
+    public List<StudentsEntity> getQrData();
 }

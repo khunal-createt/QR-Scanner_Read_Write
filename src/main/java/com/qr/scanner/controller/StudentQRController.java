@@ -33,4 +33,9 @@ public class StudentQRController {
     public ResponseEntity<StudentsEntity> findStudentById(@PathVariable("id") Long id){
         return ResponseEntity.ok(studentService.findById(id));
     }
+
+    @GetMapping("/readQR")
+    public ResponseEntity<List<StudentsEntity>> getQrData(){
+        return ResponseEntity.ok(studentService.getQrData());
+    }
 }

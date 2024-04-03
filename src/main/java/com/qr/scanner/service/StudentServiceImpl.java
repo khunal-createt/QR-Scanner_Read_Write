@@ -34,4 +34,8 @@ public class StudentServiceImpl implements StudentService {
                 .findById(id)
                 .orElseThrow(() -> new RuntimeException("Student not found"));
     }
+
+    public List<StudentsEntity> getQrData(){
+        return QRCodeGenerator.qrScan();
+    }
 }
